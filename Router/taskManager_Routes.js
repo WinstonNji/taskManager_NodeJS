@@ -3,6 +3,7 @@ const router = express.Router()
 const taskManagerControls = require('../Controller/taskManagerController')
 
 router.get('/', taskManagerControls.allTasks)
+router.post('/', taskManagerControls.createTask)
 router.route('/:id')
     .get(taskManagerControls.findSpecificTask)
     .patch(taskManagerControls.editTask)
