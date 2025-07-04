@@ -22,6 +22,11 @@ const Product = new Schema({
     company: {
         type: String,
         required: true
+    }, 
+
+    featured: {
+        type: Boolean,
+        default: false
     }
 
 }, {timestamps: true})
