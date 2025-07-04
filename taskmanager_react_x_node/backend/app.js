@@ -13,6 +13,6 @@ mongoose
     }).catch(err => console.log(err))
 
 // MiddleWare
-app.use(express.static('Public'))
+app.use(express.static('public'))
 app.use(express.json())
 app.use('/api/v2/tasks', taskRoutes)
