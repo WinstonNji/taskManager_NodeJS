@@ -15,4 +15,6 @@ mongoose
 // MiddleWare
 app.use(express.static('public'))
 app.use(express.json())
+
+// API
 app.use('/api/v2/tasks', taskRoutes)
