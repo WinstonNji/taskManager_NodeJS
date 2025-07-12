@@ -14,7 +14,7 @@ const JobSchema = new Schema ({
     status: {
         type: String,
         enum : [
-            'interview', 'declined', 'pending'
+            'interview', 'declined', 'pending','hired'
         ],
         default: 'pending'
     },
