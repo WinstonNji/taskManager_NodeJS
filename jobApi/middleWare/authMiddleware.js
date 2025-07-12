@@ -18,7 +18,10 @@ const authInterceptor = (req,res,next) => {
 
     const decoded = jwt.verify(token, jwtSecret)
 
-    req.user = decoded.username
+    req.user = {
+        username : decoded.username,
+        userId : decoded.userId
+    }
 
     next()
 }
