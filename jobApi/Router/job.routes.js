@@ -7,6 +7,7 @@ router.route('/')
     .get(authInterceptor, jobController.getAllJobs)
 
 router.route('/:id')
+    .get(authInterceptor, jobController.getSingleJob)
     .post(authInterceptor, jobController.createJob)
     .patch(authInterceptor,  jobController.updateJob)
     .delete(authInterceptor, jobController.deleteJob)
