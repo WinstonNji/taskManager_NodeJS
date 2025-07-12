@@ -31,8 +31,6 @@ const register = async (req,res) => {
 
         const hashedPassword = await bycryptjs.hash(password, 10)
 
-        console.log(hashedPassword, 'hashedPassword')
-
         const newUser = await userModel.create({
             username,
             email,

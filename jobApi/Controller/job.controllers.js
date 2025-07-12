@@ -9,7 +9,10 @@ const createJob = async (req,res) => {
 }
 
 const updateJob = async (req, res) => {
-    const newJob = await jobModel.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true})
+    const jobId = req.params.id
+    const userId = req.user.userId
+
+    const newJob = await jobModel.findOneAndUpdate({_id: jobId, createdBy: userId}, req.body, {new: true, runValidators: true})
 
     return res.json(newJob)
 }
